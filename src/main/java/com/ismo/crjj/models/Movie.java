@@ -1,17 +1,45 @@
 package com.ismo.crjj.models;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="t_movie")
 public class Movie {
 
+	@Id
 	private int id;
+	
+	@Column
 	private String title;
+	
+	@Column
 	private int year;
+	
+	@Column
 	private int runtime;
+	
+	@Column
 	private String genre1;
+	
+	@Column
 	private String genre2;
+	
+	@Column
 	private String genre3;
+	
+	@Column
 	private String director;
+	
+	@Column
 	private String actors;
+	
+	@Column
 	private String plot;
+	
+	@Column(name="posterURL")
 	private String poster;
 	
 	public Movie() {
@@ -19,7 +47,7 @@ public class Movie {
 	}
 	
 	public Movie(int id, String title, int year, int runtime, String genre1, String genre2, String genre3,
-			String director, String actor1, String actor2, String actor3, String actor4, String plot, String poster) {
+			String director, String actors, String actor4, String plot, String poster) {
 		super();
 		this.id = id;
 		this.title = title;
@@ -29,10 +57,7 @@ public class Movie {
 		this.genre2 = genre2;
 		this.genre3 = genre3;
 		this.director = director;
-		this.actor1 = actor1;
-		this.actor2 = actor2;
-		this.actor3 = actor3;
-		this.actor4 = actor4;
+		this.actors = actors;
 		this.plot = plot;
 		this.poster = poster;
 	}
@@ -84,30 +109,7 @@ public class Movie {
 	public void setDirector(String director) {
 		this.director = director;
 	}
-	public String getActor1() {
-		return actor1;
-	}
-	public void setActor1(String actor1) {
-		this.actor1 = actor1;
-	}
-	public String getActor2() {
-		return actor2;
-	}
-	public void setActor2(String actor2) {
-		this.actor2 = actor2;
-	}
-	public String getActor3() {
-		return actor3;
-	}
-	public void setActor3(String actor3) {
-		this.actor3 = actor3;
-	}
-	public String getActor4() {
-		return actor4;
-	}
-	public void setActor4(String actor4) {
-		this.actor4 = actor4;
-	}
+
 	public String getPlot() {
 		return plot;
 	}
@@ -119,6 +121,14 @@ public class Movie {
 	}
 	public void setPoster(String poster) {
 		this.poster = poster;
+	}
+
+	public String getActors() {
+		return actors;
+	}
+
+	public void setActors(String actors) {
+		this.actors = actors;
 	}
 	
 	

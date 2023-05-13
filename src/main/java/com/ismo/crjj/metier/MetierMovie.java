@@ -2,14 +2,18 @@ package com.ismo.crjj.metier;
 
 import java.util.List;
 
+import com.ismo.crjj.dao.DaoMovie;
+import com.ismo.crjj.dao.IDaoMovie;
 import com.ismo.crjj.models.Movie;
 
 public class MetierMovie implements IMetierMovie<Movie>{
+	
+	IDaoMovie<Movie> dao = new DaoMovie();
 
 	@Override
 	public List<Movie> getAllMovies() {
 		// TODO Auto-generated method stub
-		return null;
+		return dao.getAll();
 	}
 
 	@Override
