@@ -10,10 +10,7 @@ public class Movie {
 	private String genre2;
 	private String genre3;
 	private String director;
-	private String actor1;
-	private String actor2;
-	private String actor3;
-	private String actor4;
+	private String actors;
 	private String plot;
 	private String poster;
 	
